@@ -3,8 +3,6 @@
 void printBinary(int n, int i)
 {
 
-	// Prints the binary representation
-	// of a number n up to i-bits.
 	int k;
 	for (k = i - 1; k >= 0; k--) {
 
