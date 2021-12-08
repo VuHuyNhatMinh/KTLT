@@ -1,6 +1,3 @@
-// C program to convert a real value
-// to IEEE 754 floating point representation
-
 #include <stdio.h>
 
 void printBinary(int n, int i)
