@@ -10,5 +10,4 @@ int main(){
     delete english; // return the memory to the operating system.
     system("pause");
     return 0;
-
 }
