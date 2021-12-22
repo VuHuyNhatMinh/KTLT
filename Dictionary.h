@@ -8,6 +8,7 @@ struct Data
     string morseCode ;
 };
 
+
 //  "export" dictionary for usage in other file (extern)
 //  initialize data for data structure. letters are saved with index value according to their ascii value in decimal.
 //  ignore the warning below :v
