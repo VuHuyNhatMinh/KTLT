@@ -3,6 +3,9 @@
 #include <string>
 using namespace std;
 
+// Vì đô dài chuỗi đọc được mình không biết là bao nhiêu nên xử lí như thế này hơi mạo hiểm
+// có thể độ dài chuỗi chúng ta không dùng hết nhưng xử lí tốt nhất là decrypt từng kí tự một
+
 // function for decrypting. Input: Adress of the message (string*). Output: Adress of the text.
 string* decrypt(string* input){
     *input += " "; //extra space added at the end to access the last morse code

@@ -1,11 +1,14 @@
+#include "Dictionary.h"
 #include <iostream>
 #include <fstream>
 #include <cstring>
 #include <string>
+
 using namespace std;
 
 char check_exist_out(char a[],char& c)
 {
+    // Chưa xử lí đầu ra c:
     ifstream fs(a);
     if (fs.is_open()) {
         fs.close();
@@ -19,7 +22,7 @@ char check_exist_out(char a[],char& c)
     }
 }
 
-bool check_type_morse(string a)
+bool check_type(string a)
 {
     for( int i=0;i<a.size();i++)
     {
@@ -31,8 +34,13 @@ bool check_type_morse(string a)
     return true;
 }
 
+// Input: a character + line mấy
+// Output: true or false: có chuyển được hay không?
 void check_text(string s)
 {
+    // Phải check từng dòng, không check cả file được
+    // Chuối s đọc vào phải là từng dòng vì chúng ta không biết độ dài của s là bao nhiêu, thậm trí độ dài của file
+    // Cách xử lí tốt nhất là check từng kí tự một
     char text[42] = {'a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' , 'j', 'k', 'l', 'm', 'n', 'o', 'p' , 'q', 'r', 's', 't',
                 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8' ,'9', '.', '?', '-', ',', ':', '#'};
     int new_line = 1;
@@ -62,6 +70,7 @@ void check_text(string s)
     
 }
 
+// Tương tự như check_test, xử lí chưa tối ưu
 void check_morse(string s)
 {
     string morse[42] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---",
@@ -131,11 +140,15 @@ void check_morse(string s)
 
 int main(int argc,char* argv[])
 {
+    /*
+    dùng data chung do Đại tạo ra: Dictionary.h
     char text[42] = {'a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' , 'j', 'k', 'l', 'm', 'n', 'o', 'p' , 'q', 'r', 's', 't',
                 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8' ,'9', '.', '?', '-', ',', ':', 'E'};
     char morse[42][10] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---",
                 ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.---", "--..", "-----", ".----", "..---", 
                 "...---", "....-", ".....", "-....", "--...", "---..", "----.", ".-.-.-", "..--..", "-....-", "--..--", "---...", "........"};
+    */
+
     string s;
     ifstream fin;
     fin.open(argv[1]);                               //open file
@@ -148,7 +161,7 @@ int main(int argc,char* argv[])
     cout << s << endl;
     fin.close();                                        //close file
 
-    if(check_type_morse(s))    //check if file morse or text
+    if(check_type(s))    //check if file morse or text
     {
         check_morse(s);
     }
