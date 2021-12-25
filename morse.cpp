@@ -47,15 +47,15 @@ int main(int argc, char* argv[])
     if (check_type(data))
     {
         // If it is morse file
-        string *input = &data;
-        string* english = decrypt(input);
-        cout << *english << '\n';
+        // string *input = &data;
+        // string* english = decrypt(input);
+        // cout << *english << '\n';
 
     }
     else
     {
         // If it is text file
-        // check_text(data);
+        check_text(data);
 
         // Decrypt to morse file
         res = Textmorse(data);
