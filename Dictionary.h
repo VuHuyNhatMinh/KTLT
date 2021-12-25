@@ -34,7 +34,7 @@ Data dictionary[128] = { {'\0', ""},
 //function for accessing dictionary
 
 //input: A char; output: Morsecode
-string Char2Morse(char input){
+string Char2Morse(char input){                                                                                                  
     // access Morse code with a character
     if (input == '\0')
     {

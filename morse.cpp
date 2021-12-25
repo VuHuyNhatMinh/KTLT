@@ -1,3 +1,7 @@
+/*
+    Author: 
+*/
+
 #include <iostream>
 #include "Dictionary.h"
 // #include "ErrorChecking.h"

@@ -6,15 +6,16 @@
 
 using namespace std;
 
-char check_exist_out(char a[],char& c)
-{
-    // Chưa xử lí đầu ra c:
+char check_exist_out(char a[],char& c)     //input là mảng một chiều kí tự chứa một string
+{                                          //output là wanrning nếu file đã tồn tại, là NULL nếu file chưa tồn tại
+    // Chưa xử lí đầu ra c:     // không hiểu
     ifstream fs(a);
     if (fs.is_open()) {
         fs.close();
         cout <<"Warning: FILENAME already exists. Do you wish to overwrite (y,n)";
         cin>>c;
         return c;
+        // retrun 0, 1
     }
     else
     {
@@ -22,8 +23,8 @@ char check_exist_out(char a[],char& c)
     }
 }
 
-bool check_type(string a)
-{
+bool check_type(string a)       //input là một string 
+{                               //output là true nếu là morse, là false nếu là text 
     for( int i=0;i<a.size();i++)
     {
         if(a[i]!='.'&& a[i]!='-' && a[i]!='/'&&a[i]!=' ')
