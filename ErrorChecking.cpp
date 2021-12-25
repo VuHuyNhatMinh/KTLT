@@ -34,18 +34,25 @@ char check_exist_out(char a[])     //input là mảng một chiều kí tự ch�
     ifstream fs(a);
     if (fs.is_open()) {
         fs.close();
-        cout <<"Warning: "<<a<<" already exists. Do you wish to overwrite (y,n)";
+        cout <<"Warning: "<<a<<" already exists. Do you wish to overwrite (y,n)? ";
+        
         cin>>c;
         while(c!='y'&&c!='n')
         {
             cout<<"Enter only y or n";
         }
-        return c;
-        // retrun 0, 1
+        if (c == 'y')
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     else
     {
-        return '\0';
+        return true;
     }
 }
 
