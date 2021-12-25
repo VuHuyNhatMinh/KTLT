@@ -10,6 +10,22 @@
 #include <cstring>
 #include <string>
 
+//check file open, nếu mở được return true, ko thì return false
+bool check_open(char a[])
+{
+    ifstream fin(a);                             
+    if(!fin.is_open())  
+	{
+		cout<<"Error: FILENAME could not be opened.";
+        return false;
+	}
+    else
+    {
+        fin.close();
+        return true;
+    }
+}
+
 
 //hàm check xem file đầu ra có exist hay không, return ký tự (y hoặc n) nếu đã tồn tại, return NULL nếu chưa tồn tại
 char check_exist_out(char a[])     //input là mảng một chiều kí tự chứa một string
@@ -18,7 +34,7 @@ char check_exist_out(char a[])     //input là mảng một chiều kí tự ch�
     ifstream fs(a);
     if (fs.is_open()) {
         fs.close();
-        cout <<"Warning: FILENAME already exists. Do you wish to overwrite (y,n)";
+        cout <<"Warning: "<<a<<" already exists. Do you wish to overwrite (y,n)";
         cin>>c;
         while(c!='y'&&c!='n')
         {
