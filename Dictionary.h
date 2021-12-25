@@ -2,6 +2,7 @@
 #define DICTIONARY_H
 
 #include<iostream>
+
 using namespace std;
 
 //define data structure.

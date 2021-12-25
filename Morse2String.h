@@ -1,6 +1,7 @@
 #include "Dictionary.h"
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 // Vì đô dài chuỗi đọc được mình không biết là bao nhiêu nên xử lí như thế này hơi mạo hiểm
