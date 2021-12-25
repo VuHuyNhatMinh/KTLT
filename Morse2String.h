@@ -9,8 +9,8 @@ using namespace std;
 
 // function for decrypting. Input: Adress of the message (string*). Output: Adress of the text.
 string* decrypt(string* input){
-    *input += " "; //extra space added at the end to access the last morse code
-    string* output = new string; 
+    *input += " "; //extra space added at the end to access the last morse code//cái này để đề phòng trường hợp xét đến kí tự
+    string* output = new string;            //morse cuối cùng trong FILE mà không có dấu " " hay dấu "/" để chốt
     if (!output)
     {
         return NULL;
