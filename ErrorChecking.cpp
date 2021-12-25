@@ -82,12 +82,13 @@ void check_morse(string s)
     int new_line =1;
     for( int i=0;i<s.size();i++)
     {
-        if(s[i]!=' '&&s[i]!='\n'&&s[i]!='/')
+        if(s[i]!=' '&&s[i]!='\n'&&s[i]!='/') 
         {
             a[index] = s[i];
             index++;
         }
-        if(s[i]==' '||s[i]=='\n'||s[i]=='/') 
+
+        if(s[i]==' '||s[i]=='\n'||s[i]=='/')  
         {
             if(s[i]=='/')continue;
             if(s[i]==' '&&s[i-1]=='/')continue;
