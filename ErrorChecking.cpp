@@ -16,7 +16,7 @@ bool check_open(char a[])
     ifstream fin(a);                             
     if(!fin.is_open())  
 	{
-		cout<<"Error: FILENAME could not be opened.";
+		cout<<"Error: "<<a<<" could not be opened.";
         return false;
 	}
     else
