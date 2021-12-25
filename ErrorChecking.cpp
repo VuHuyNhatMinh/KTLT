@@ -105,6 +105,7 @@ void check_text(string s)   //input: a string
 //check error character in file morse
 void check_morse(string s)  //input is a string
 {                           //output: show error characters and their locations on screen
+    s += " ";
     string morse[42] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---",
                 ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.---", "--..", "-----", ".----", "..---", 
                 "...---", "....-", ".....", "-....", "--...", "---..", "----.", ".-.-.-", "..--..", "-....-", "--..--", "---...", "........"};
@@ -150,23 +151,23 @@ void check_morse(string s)  //input is a string
             }                        
         }
 
-        if(i==s.size()-1)           //nếu gặp kí tự cuối cùng trong file thì nghĩa là hết một từ morse cuối cùng, 
-        {                           // check từ morse đó         
-            bool check = true;
-            a[index] ='\0';
-            for(int j=0;j<42;j++)
-            {
-                if(a==morse[j])
-                {
-                    check = false;
-                }
-                if(check == false)break;
-            }
-            if(check == true)
-            {
-                cout<<"Invalid Morse code "<<a<<" on line  "<<new_line<<endl;
-            }
-        }
+        // if(i==s.size()-1)           //nếu gặp kí tự cuối cùng trong file thì nghĩa là hết một từ morse cuối cùng, 
+        // {                           // check từ morse đó         
+        //     bool check = true;
+        //     a[index] ='\0';
+        //     for(int j=0;j<42;j++)
+        //     {
+        //         if(a==morse[j])
+        //         {
+        //             check = false;
+        //         }
+        //         if(check == false)break;
+        //     }
+        //     if(check == true)
+        //     {
+        //         cout<<"Invalid Morse code "<<a<<" on line  "<<new_line<<endl;
+        //     }
+        // }
     }
 }
 
