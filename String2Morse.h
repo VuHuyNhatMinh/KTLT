@@ -15,7 +15,9 @@ string* Textmorse(string* text){
         {
             *code += Char2Morse(text->at(i)) + ' ';
         }
-        else *code += '/ ';
+        else *code += '/';
+
+        *code += ' ';
     }
     return code;
 }
