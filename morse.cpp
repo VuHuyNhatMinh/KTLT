@@ -46,30 +46,28 @@ int main(int argc, char* argv[])
     */
     // An object string res to store decryption data
     string* res;
-    /*
-    if (check_type(data))
+    if (check_type(*data))
     {
         // Check error in morse file
-        check_morse(data);
+        check_morse(*data);
 
         cout << "This is morse file" << endl;
 
         // Decrypt to text file
         res = decrypt(data);
-        delete data;
     }
     else
     {
         // Check error in text file
-        check_text(data);
+        check_text(*data);
 
         cout << "This is txt file" << endl;
 
         // Decrypt to morse file
-        res = Textmorse(data);
+        // res = Textmorse(*data);
     }
-    */
-   
+    delete data;   
+    
     /*
         Open file result to write result
     */
