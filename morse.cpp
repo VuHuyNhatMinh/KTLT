@@ -55,9 +55,9 @@ int main(int argc, char* argv[])
 
         // Decrypt to text file
         string* input = &data;
-        string* english = decrypt(input);
-        res = *english;
-        delete english;
+        input = decrypt(input);
+        res = *input;
+        delete input;
     }
     else
     {
@@ -69,13 +69,13 @@ int main(int argc, char* argv[])
         // Decrypt to morse file
         res = Textmorse(data);
     }
-    // cout << res << endl;
 
     /*
         Open file result to write result
     */
-    fstream fresult;
-    fresult.open(argv[2], ios::out);
+    ofstream fresult;
+    fresult.open(argv[2]);
+    cout << res << endl;
     fresult << res << endl;
     fresult.close(); 
 }
