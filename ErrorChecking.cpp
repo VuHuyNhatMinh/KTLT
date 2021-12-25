@@ -25,6 +25,7 @@ char check_exist_out(char a[])     //input là mảng một chiều kí tự ch�
             cout<<"Enter only y or n";
         }
         return c;
+        // retrun 0, 1
     }
     else
     {
