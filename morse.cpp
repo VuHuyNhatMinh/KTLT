@@ -34,8 +34,8 @@ int main(int argc, char* argv[])
     /*
         Open file data to perform decrypt
     */
-    fstream fdata;
-    fdata.open(argv[1], ios::in);
+    ifstream fdata;
+    fdata.open(argv[1]);
     // An object string data to store all text in data file
     string* data = new string;    
     getline(fdata, *data, '\0');
@@ -46,6 +46,7 @@ int main(int argc, char* argv[])
     */
     // An object string res to store decryption data
     string* res;
+    /*
     if (check_type(data))
     {
         // Check error in morse file
@@ -67,7 +68,8 @@ int main(int argc, char* argv[])
         // Decrypt to morse file
         res = Textmorse(data);
     }
-
+    */
+   
     /*
         Open file result to write result
     */
@@ -75,5 +77,6 @@ int main(int argc, char* argv[])
     fresult.open(argv[2]);
     // cout << res << endl;
     fresult << *res << endl;
+    delete res;
     fresult.close(); 
 }
