@@ -90,7 +90,7 @@ void check_text(string s)   //input: a string
             }
             if(check == false)
             {
-                cout<<"Error: Unrecognised character "<<s[i]<<" on line "<<new_line<<endl;      
+                cout<<"Error: Unrecognised character "<< i << s[i]<<" on line "<<new_line<<endl;      
             }
         }
         if(s[i]=='\n')

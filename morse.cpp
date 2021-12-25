@@ -31,8 +31,10 @@ int main(int argc, char* argv[])
         return 1;
     }
 
-    // Open file data to perform decrypt
-    ifstream fdata;
+    /*
+        Open file data to perform decrypt
+    */
+    fstream fdata;
     fdata.open(argv[1], ios::in);
     // An object string data to store all text in data file
     string data;    
@@ -46,20 +48,34 @@ int main(int argc, char* argv[])
     string res;
     if (check_type(data))
     {
-        // If it is morse file
-        // string *input = &data;
-        // string* english = decrypt(input);
-        // cout << *english << '\n';
+        // Check error in morse file
+        check_morse(data);
 
+        cout << "This is morse file" << endl;
+
+        // Decrypt to text file
+        string* input = &data;
+        string* english = decrypt(input);
+        res = *english;
+        delete english;
     }
     else
     {
-        // If it is text file
+        // Check error in text file
         check_text(data);
+
+        cout << "This is txt file" << endl;
 
         // Decrypt to morse file
         res = Textmorse(data);
     }
-    cout << res << endl;
-    system("pause>0");
+    // cout << res << endl;
+
+    /*
+        Open file result to write result
+    */
+    fstream fresult;
+    fresult.open(argv[2], ios::out);
+    fresult << res << endl;
+    fresult.close(); 
 }
