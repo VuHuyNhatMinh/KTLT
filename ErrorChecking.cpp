@@ -72,15 +72,15 @@ bool check_type(string a)       //input là một string data
 //check error characters in file text
 void check_text(string s)   //input: a string       
 {                           //output: show error characters and their locations on screen  
-    char text[42] = {'a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' , 'j', 'k', 'l', 'm', 'n', 'o', 'p' , 'q', 'r', 's', 't',
-                'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8' ,'9', '.', '?', '-', ',', ':', '#'};
+    char text[68] = {'a','A','b','B' ,'c','C', 'd', 'D','e','E', 'f','F', 'g','G', 'h','H', 'i','I' , 'j','J', 'k','K', 'l','L', 'm','M', 'n','N', 'o','O', 'p' ,'P', 'q','Q', 'r','R', 's','S', 't','T',
+                'u','U', 'v','V', 'w','W', 'x','X', 'y','Y', 'z','Z', '0', '1', '2', '3', '4', '5', '6', '7', '8' ,'9', '.', '?', '-', ',', ':', '#'};
     int new_line = 1;
     for( int i=0;i<s.size();i++)    //duyệt tất cả các kí tự trong string
     {
         if(s[i]!=' '&&s[i]!='\n')   //nếu kí tự không phải là kí tự dấu cách hoặc kí tự xuống dòng thì kiểm tra
         {
             bool check = false;
-            for(int j=0;j<42;j++)   //nếu kí tự ko có trong bảng kí tự bên trên thì check = false, có thì là true
+            for(int j=0;j<68;j++)   //nếu kí tự ko có trong bảng kí tự bên trên thì check = false, có thì là true
             {
                 if(s[i]==text[j])
                 {
