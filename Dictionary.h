@@ -1,3 +1,6 @@
+#ifndef _DICTIONARY_H
+#define _DICTIONARY_H
+
 #include<iostream>
 using namespace std;
 
@@ -12,7 +15,7 @@ struct Data
 //  "export" dictionary for usage in other file (extern)
 //  initialize data for data structure. letters are saved with index value according to their ascii value in decimal.
 //  ignore the warning below :v
-extern Data dictionary[128] = { {'\0', ""}, 
+Data dictionary[128] = { {'\0', ""}, 
                                 {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\n', "\n"},
                                 {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, 
                                 {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, 
@@ -58,3 +61,5 @@ char Morse2Char(string input){
     }
     return dictionary[42].letter; // return '*' if there's no match.
 }
+
+#endif
