@@ -151,24 +151,6 @@ void check_morse(string s)  //input is a string
                 k++;
             }                        
         }
-
-        // if(i==s.size()-1)           //nếu gặp kí tự cuối cùng trong file thì nghĩa là hết một từ morse cuối cùng, 
-        // {                           // check từ morse đó         
-        //     bool check = true;
-        //     a[index] ='\0';
-        //     for(int j=0;j<42;j++)
-        //     {
-        //         if(a==morse[j])
-        //         {
-        //             check = false;
-        //         }
-        //         if(check == false)break;
-        //     }
-        //     if(check == true)
-        //     {
-        //         cout<<"Invalid Morse code "<<a<<" on line  "<<new_line<<endl;
-        //     }
-        // }
     }
 }
 
