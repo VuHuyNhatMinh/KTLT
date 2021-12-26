@@ -29,8 +29,8 @@ bool check_open(char a[])
 
 
 //hàm check xem file đầu ra có exist hay không,nếu đã tồn tại enter y hàm trả về True nếu enter n thì trả về False, return True nếu chưa tồn tại
-bool check_exist_out(char a[])     //input là mảng một chiều kí tự chứa một string
-{                                  //output là wanrning nếu file đã tồn tại, là NULL nếu file chưa tồn tại
+bool check_exist_out(char a[])     //input: là mảng một chiều kí tự chứa một string
+{                                  //output:nếu file đã tồn tại enter 'y' thì return True còn enter 'n' thì return False, return False nếu file chưa tồn tại
     char c;
     ifstream fs(a);
     if (fs.is_open()) {
@@ -151,24 +151,6 @@ void check_morse(string s)  //input is a string
                 k++;
             }                        
         }
-
-        // if(i==s.size()-1)           //nếu gặp kí tự cuối cùng trong file thì nghĩa là hết một từ morse cuối cùng, 
-        // {                           // check từ morse đó         
-        //     bool check = true;
-        //     a[index] ='\0';
-        //     for(int j=0;j<42;j++)
-        //     {
-        //         if(a==morse[j])
-        //         {
-        //             check = false;
-        //         }
-        //         if(check == false)break;
-        //     }
-        //     if(check == true)
-        //     {
-        //         cout<<"Invalid Morse code "<<a<<" on line  "<<new_line<<endl;
-        //     }
-        // }
     }
 }
 
