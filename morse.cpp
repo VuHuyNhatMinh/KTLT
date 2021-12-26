@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
     ifstream fdata;
     fdata.open(argv[1]);
     // An object string data to store all text in data file
-    string* data;    
+    string* data = new string;    
     getline(fdata, *data, '\0');
     fdata.close();
    
@@ -54,7 +54,7 @@ int main(int argc, char* argv[])
         // cout << "This is morse file" << endl;
 
         // Decrypt to text file
-        res = Decrypt(data);
+        res = decrypt(data);
     }
     else
     {
@@ -73,7 +73,7 @@ int main(int argc, char* argv[])
     */
     ofstream fresult;
     fresult.open(argv[2]);
-    fresult << res;
+    fresult << *res;
     delete res;
     fresult.close(); 
 }

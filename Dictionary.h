@@ -38,7 +38,7 @@ string Char2Morse(char input){
     // access Morse code with a character
     if (dictionary[(int)input].morseCode == "")
     {
-        return dictionary[35].morseCode;
+        return "";
     }
     return dictionary[(int)input].morseCode;
 }
