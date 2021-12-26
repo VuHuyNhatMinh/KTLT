@@ -1,5 +1,5 @@
 /*
-    Author: 
+    Author: Vu Huy Nhat Minh - 20191973
 */
 
 #include <iostream>
@@ -37,7 +37,6 @@ int main(int argc, char* argv[])
     ifstream fdata;
     fdata.open(argv[1]);
     // An object string data to store all text in data file
-    // string data = new string;
     string data;    
     getline(fdata, data, '\0');
     fdata.close();
@@ -52,32 +51,27 @@ int main(int argc, char* argv[])
         // Check error in morse file
         check_morse(data);
 
-        cout << "This is morse file" << endl;
+        // cout << "This is morse file" << endl;
 
         // Decrypt to text file
-        // res = decrypt(data);
+        res = Decrypt(data);
     }
     else
     {
         // Check error in text file
         check_text(data);
 
-        cout << "This is txt file" << endl;
+        // cout << "This is txt file" << endl;
 
         // Decrypt to morse file
         res = Textmorse(data);
     }
-    // delete data;   
     
     /*
         Open file result to write result
     */
     ofstream fresult;
     fresult.open(argv[2]);
-    // cout << *res << endl;
-    // string msg = *res;
-    // fresult << msg.length() << endl;
     fresult << res << endl;
-    // delete res;
     fresult.close(); 
 }
