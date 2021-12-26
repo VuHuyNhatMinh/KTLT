@@ -72,6 +72,6 @@ int main(int argc, char* argv[])
     */
     ofstream fresult;
     fresult.open(argv[2]);
-    fresult << res << endl;
+    fresult << res;
     fresult.close(); 
 }
