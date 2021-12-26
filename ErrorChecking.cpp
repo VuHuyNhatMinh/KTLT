@@ -61,7 +61,7 @@ bool check_type(string a)       //input là một string data
 {                               //output là true nếu là morse, là false nếu là text 
     for( int i=0;i<a.size();i++)        //duyệt qua tất cả các kí tự trong string, 
     {                                   //chỉ cần gặp một kí tự khác '.', '-', '/' hoặc ' ' thôi thì sẽ là file text
-        if(a[i]!='.'&& a[i]!='-' && a[i]!='/'&&a[i]!=' ')  
+        if(a[i]!='.'&& a[i]!='-' && a[i]!='/'&&a[i]!=' '&&a[i]!='\n')  
         {
             return false;
         }
