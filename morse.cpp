@@ -62,6 +62,7 @@ int main(int argc, char* argv[])
         check_text(*data);
 
         cout << "This is txt file" << endl;
+
         // Decrypt to morse file
         res = Textmorse(data);
     }
@@ -73,8 +74,8 @@ int main(int argc, char* argv[])
     ofstream fresult;
     fresult.open(argv[2]);
     cout << *res << endl;
-    string msg = *res;
-    fresult << msg.length() << endl;
+    // string msg = *res;
+    // fresult << msg.length() << endl;
     fresult << *res << endl;
     delete res;
     fresult.close(); 
