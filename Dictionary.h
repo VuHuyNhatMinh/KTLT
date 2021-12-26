@@ -1,3 +1,4 @@
+/*Nguoi viet: Nguyen Dinh Quoc Dai  20191724 */
 #ifndef _DICTIONARY_H
 #define _DICTIONARY_H
 
