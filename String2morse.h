@@ -22,7 +22,7 @@ using namespace std;
          else 
          {
             code += '/';
-            code += "  ";
+            code += " ";
          }
      }
      return code;
