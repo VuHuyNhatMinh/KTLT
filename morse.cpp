@@ -62,7 +62,6 @@ int main(int argc, char* argv[])
         check_text(*data);
 
         cout << "This is txt file" << endl;
-
         // Decrypt to morse file
         res = Textmorse(data);
     }
