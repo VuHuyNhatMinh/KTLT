@@ -6,6 +6,7 @@
 #include <string>
 #include"Dictionary.h"
 using namespace std;
+
 // Hàm dùng để chuyển chuỗi text hợp lệ sang đoạn mã Morse tuong ứng.
 // Đầu vào là  chuỗi string được copy ra từ file text. 
 // Đầu ra: là  đoạn mã Morse tương ứng 
