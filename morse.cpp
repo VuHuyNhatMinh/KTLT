@@ -73,7 +73,7 @@ int main(int argc, char* argv[])
     */
     ofstream fresult;
     fresult.open(argv[2]);
-    cout << *res << endl;
+    // cout << *res << endl;
     // string msg = *res;
     // fresult << msg.length() << endl;
     fresult << *res << endl;

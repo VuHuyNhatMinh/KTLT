@@ -1,5 +1,6 @@
-//quan
-
+/*
+    Author: 
+*/
 
 #ifndef _ERRORCHECKING_CPP_
 #define _ERRORCHECKING_CPP_
@@ -28,7 +29,7 @@ bool check_open(char a[])
 
 
 //hàm check xem file đầu ra có exist hay không, return ký tự (y hoặc n) nếu đã tồn tại, return NULL nếu chưa tồn tại
-char check_exist_out(char a[])     //input là mảng một chiều kí tự chứa một string
+bool check_exist_out(char a[])     //input là mảng một chiều kí tự chứa một string
 {                                  //output là wanrning nếu file đã tồn tại, là NULL nếu file chưa tồn tại
     char c;
     ifstream fs(a);
