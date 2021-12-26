@@ -1,5 +1,5 @@
 /*
-    Author: 
+    Author: quan
 */
 
 #ifndef _ERRORCHECKING_CPP_
