@@ -1,3 +1,4 @@
+/* Author: Nguyen Dinh Quoc Dai 20191724*/
 #include "Dictionary.h"
 #include <iostream>
 #include <string>
