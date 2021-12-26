@@ -26,7 +26,7 @@ bool check_type(string a)       //input là một string
 {                               //output là true nếu là morse, là false nếu là text 
     for( int i=0;i<a.size();i++)
     {
-        if(a[i]!='.'&& a[i]!='-' && a[i]!='/'&&a[i]!=' ')
+        if(a[i]!='.'&& a[i]!='-' && a[i]!='/'&&a[i]!=' '&&a[i]!='\n')
         {
             return false;
         }
