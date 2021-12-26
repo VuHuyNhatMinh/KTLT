@@ -37,36 +37,37 @@ int main(int argc, char* argv[])
     ifstream fdata;
     fdata.open(argv[1]);
     // An object string data to store all text in data file
-    string* data = new string;    
-    getline(fdata, *data, '\0');
+    // string data = new string;
+    string data;    
+    getline(fdata, data, '\0');
     fdata.close();
    
     /*
         Check the file type
     */
     // An object string res to store decryption data
-    string* res;
-    if (check_type(*data))
+    string res;
+    if (check_type(data))
     {
         // Check error in morse file
-        check_morse(*data);
+        check_morse(data);
 
         cout << "This is morse file" << endl;
 
         // Decrypt to text file
-        res = decrypt(data);
+        // res = decrypt(data);
     }
     else
     {
         // Check error in text file
-        check_text(*data);
+        check_text(data);
 
         cout << "This is txt file" << endl;
 
         // Decrypt to morse file
-        res = Textmorse(data);
+        // res = Textmorse(data);
     }
-    delete data;   
+    // delete data;   
     
     /*
         Open file result to write result
@@ -76,7 +77,7 @@ int main(int argc, char* argv[])
     // cout << *res << endl;
     // string msg = *res;
     // fresult << msg.length() << endl;
-    fresult << *res << endl;
-    delete res;
+    fresult << res << endl;
+    // delete res;
     fresult.close(); 
 }

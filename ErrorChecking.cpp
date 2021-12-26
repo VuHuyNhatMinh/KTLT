@@ -136,7 +136,7 @@ void check_morse(string s)  //input is a string
             }
             if(check == false)
             {
-                cout<<"Invalid Morse code "<<a<<" on line  "<<new_line<<endl;
+                cout<<"Invalid Morse code "<< i << a<<" on line  "<<new_line<<endl;
             }
             if(s[i]=='\n')
             {
