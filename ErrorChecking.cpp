@@ -1,5 +1,5 @@
 /*
-    Author: quan
+    Author: Dinh Hong Quan 20192031
 */
 
 #ifndef _ERRORCHECKING_CPP_
