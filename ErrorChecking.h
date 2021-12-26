@@ -10,11 +10,11 @@
 #include <cstring>
 #include <string>
 
-bool check_open(char a[]);  //check file vào
-bool check_exist_out(char a[]);//hàm check xem file đầu ra có exist hay không, return ký tự (y hoặc n) nếu đã tồn tại, return NULL nếu chưa tồn tại
-bool check_type(string a);//check if a is text or morse
+bool check_open(char a[]);  //check if input file can open
+bool check_exist_out(char a[]);// check if output file  exists 
+bool check_type(string a);//check if input file is text or morse
 void check_text(string s);//check error characters in file text
-void check_morse(string s);//check error character in file morse
+void check_morse(string s);//check error characters in file morse
 
 #include "ErrorChecking.cpp"
 
