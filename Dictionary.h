@@ -1,8 +1,4 @@
-#ifndef DICTIONARY_H
-#define DICTIONARY_H
-
 #include<iostream>
-
 using namespace std;
 
 //define data structure.
@@ -16,8 +12,8 @@ struct Data
 //  "export" dictionary for usage in other file (extern)
 //  initialize data for data structure. letters are saved with index value according to their ascii value in decimal.
 //  ignore the warning below :v
-Data dictionary[128] = { {'\0', ""}, 
-                                {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""},
+extern Data dictionary[128] = { {'\0', ""}, 
+                                {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\n', "\n"},
                                 {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, 
                                 {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, 
                                 {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""},  {'#', "........"}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, {'\0', ""}, 
@@ -34,11 +30,11 @@ Data dictionary[128] = { {'\0', ""},
 //function for accessing dictionary
 
 //input: A char; output: Morsecode
-string Char2Morse(char input){                                                                                                  
+string Char2Morse(char input){
     // access Morse code with a character
-    if (input == '\0')
+    if (dictionary[(int)input].morseCode == "")
     {
-        return "";
+        return dictionary[35].morseCode;
     }
     return dictionary[(int)input].morseCode;
 }
@@ -62,5 +58,3 @@ char Morse2Char(string input){
     }
     return dictionary[42].letter; // return '*' if there's no match.
 }
-
-#endif
