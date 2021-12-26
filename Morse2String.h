@@ -18,15 +18,16 @@ string* decrypt(string* input){
     string temp;
     for (int i = 0; i < input->length(); i++)
     {
-        if (input->at(i) != ' ' && input->at(i) != '/'){ // Check space and slash.
+        if (input->at(i) != ' ' && input->at(i) != '/' && input->at(i) != '\n'){ // Check space, "new line" (\n) and slash.
             temp += input->at(i); //storing morse code of a single character
         }
         else if (input->at(i) == '/'){//in case of forward-slash
             *output += ' '; // append ' ' to the output string.
         }        
-        else if(input->at(i) == ' '){ //in case of space         
+        else if(input->at(i) == ' ' || input->at(i) == '\n'){ //in case of space or '\n'       
             *output += Morse2Char(temp); // search the dictionary for matching character.
             temp.clear(); // clear the temporary variable.
+            if(input->at(i) == '\n'){*output += '\n';} // in case of '\n' append '\n' to output.
         }
     }
     return output;
