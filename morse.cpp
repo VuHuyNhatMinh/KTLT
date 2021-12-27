@@ -1,5 +1,9 @@
 /*
     Author: Vu Huy Nhat Minh - 20191973
+    This is the main function to execute the program.
+
+    Github link for project: https://github.com/VuHuyNhatMinh/KTLT
+    For more informations, please contact: nminhstickpk@gmail.com
 */
 
 #include <iostream>
@@ -9,6 +13,8 @@
 #include "ErrorChecking.h"
 #include "Morse2String.h"
 #include "String2Morse.h"
+
+// #define DEBUG
 
 using namespace std;
 
@@ -51,7 +57,9 @@ int main(int argc, char* argv[])
         // Check error in morse file
         check_morse(*data);
 
-        // cout << "This is morse file" << endl;
+        #ifdef DEBUG
+            cout << "This is morse file" << endl;
+        #endif
 
         // Decrypt to text file
         res = decrypt(data);
@@ -61,7 +69,9 @@ int main(int argc, char* argv[])
         // Check error in text file
         check_text(*data);
 
-        // cout << "This is txt file" << endl;
+        #ifdef DEBUG
+            cout << "This is txt file" << endl;
+        #endif
 
         // Decrypt to morse file
         res = Textmorse(data);
