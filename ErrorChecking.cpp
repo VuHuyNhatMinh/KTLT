@@ -106,7 +106,9 @@ void check_text(string s)   //input: a string
 //check error character in file morse
 void check_morse(string s)  //input is a string
 {                           //output: show error characters and their locations on screen
-    s += " ";
+    
+
+     s += " ";
     string morse[42] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---",
                 ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.---", "--..", "-----", ".----", "..---", 
                 "...---", "....-", ".....", "-....", "--...", "---..", "----.", ".-.-.-", "..--..", "-....-", "--..--", "---...", "........"};
@@ -122,11 +124,11 @@ void check_morse(string s)  //input is a string
         }
         if(s[i]==' '||s[i]=='\n'||s[i]=='/')       //nếu kí tự là dấu cách hoặc xuống dòng hoặc '/' nghĩa là a đã là một từ morse
         {
-            if(s[i]=='/')continue;                  // nếu là kí tự '/' thì nghĩa là trước đó là kí tự dấu cách, nên bỏ qua
-            if(s[i]==' '&&s[i-1]=='/')continue;     //nếu là kí tự dấu cách và trước đó là kí tự '/' thì bỏ qua 
-            bool check = false;                     //còn lại là trường hợp dấu cách kết thúc một từ morse
-            a[index] ='\0';                         //thêm kí tự NULL để a thành string
-            for(int j=0;j<42;j++)                   //xét xem từ morse có trong bảng morse kia không, nếu có thì check =true, không thì false
+            if(s[i]=='/'&&a[0]=='\0')continue;     // nếu là kí tự '/' và mảng a rỗng thì nghĩa là trường hợp trước đó là một dấu cách, nên bỏ qua
+            if(s[i]==' '&&a[0]=='\0')continue;     //nếu là kí tự dấu cách và mảng a rỗng thì là trường hợp dấu cách sau kí tự '/' nên bỏ qua 
+            bool check = false;                    //còn lại là trường hợp dấu cách hoặc dấu '/' kết thúc một từ morse
+            a[index] ='\0';                        //thêm kí tự NULL để a thành string
+            for(int j=0;j<42;j++)                  //xét xem từ morse có trong bảng morse kia không, nếu có thì check =true, không thì false
             {
                 if(a==morse[j])
                 {
@@ -151,24 +153,6 @@ void check_morse(string s)  //input is a string
                 k++;
             }                        
         }
-
-        // if(i==s.size()-1)           //nếu gặp kí tự cuối cùng trong file thì nghĩa là hết một từ morse cuối cùng, 
-        // {                           // check từ morse đó         
-        //     bool check = true;
-        //     a[index] ='\0';
-        //     for(int j=0;j<42;j++)
-        //     {
-        //         if(a==morse[j])
-        //         {
-        //             check = false;
-        //         }
-        //         if(check == false)break;
-        //     }
-        //     if(check == true)
-        //     {
-        //         cout<<"Invalid Morse code "<<a<<" on line  "<<new_line<<endl;
-        //     }
-        // }
     }
 }
 
