@@ -28,7 +28,6 @@ string* Textmorse(string* text){
             *code += ' ';
         }
     }
-    // code->at(code->length()-1)='\0';
     return code;
 }
 
