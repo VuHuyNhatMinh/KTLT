@@ -106,7 +106,56 @@ void check_text(string s)   //input: a string
 //check error character in file morse
 void check_morse(string s)  //input is a string
 {                           //output: show error characters and their locations on screen
-    s += " ";
+    // s += " ";
+    // string morse[42] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---",
+    //             ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.---", "--..", "-----", ".----", "..---", 
+    //             "...---", "....-", ".....", "-....", "--...", "---..", "----.", ".-.-.-", "..--..", "-....-", "--..--", "---...", "........"};
+    // char a[100] = {'\0'};           //mảng để lưu một từ morse
+    // int index = 0;
+    // int new_line =1;
+    // for( int i=0;i<s.size();i++)        //duyệt tất cả các data trong string
+    // {
+    //     if(s[i]!=' '&&s[i]!='\n'&&s[i]!='/')    //nếu khác dấu cách, xuống dòng hoặc '/' thì thêm kí tự vào mảng a
+    //     {
+    //         a[index] = s[i];
+    //         index++;
+    //     }
+    //     if(s[i]==' '||s[i]=='\n'||s[i]=='/')       //nếu kí tự là dấu cách hoặc xuống dòng hoặc '/' nghĩa là a đã là một từ morse
+    //     {
+    //         if(s[i]=='/')continue;                  // nếu là kí tự '/' thì nghĩa là trước đó là kí tự dấu cách, nên bỏ qua
+    //         if(s[i]==' '&&s[i-1]=='/')continue;     //nếu là kí tự dấu cách và trước đó là kí tự '/' thì bỏ qua 
+    //         bool check = false;                     //còn lại là trường hợp dấu cách kết thúc một từ morse
+    //         a[index] ='\0';                         //thêm kí tự NULL để a thành string
+    //         for(int j=0;j<42;j++)                   //xét xem từ morse có trong bảng morse kia không, nếu có thì check =true, không thì false
+    //         {
+    //             if(a==morse[j])
+    //             {
+    //                 check = true;
+    //                 break;
+    //             }
+    //         }
+    //         if(check == false)
+    //         {
+    //             cout<<"Invalid Morse code "<< i << a<<" on line  "<<new_line<<endl;
+    //         }
+    //         if(s[i]=='\n')
+    //         {
+    //             new_line++;                 // gặp kí tự xuống dòng thì new_line (dòng đang xét) + 1
+    //         }
+    //         index=0;
+
+    //         int k=0;        // clear  array a
+    //         while(a[k]!='\0')
+    //         {
+    //             a[k] = '\0';
+    //             k++;
+    //         }                        
+    //     }
+    // }
+
+
+
+     s += " ";
     string morse[42] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---",
                 ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.---", "--..", "-----", ".----", "..---", 
                 "...---", "....-", ".....", "-....", "--...", "---..", "----.", ".-.-.-", "..--..", "-....-", "--..--", "---...", "........"};
@@ -122,11 +171,11 @@ void check_morse(string s)  //input is a string
         }
         if(s[i]==' '||s[i]=='\n'||s[i]=='/')       //nếu kí tự là dấu cách hoặc xuống dòng hoặc '/' nghĩa là a đã là một từ morse
         {
-            if(s[i]=='/')continue;                  // nếu là kí tự '/' thì nghĩa là trước đó là kí tự dấu cách, nên bỏ qua
-            if(s[i]==' '&&s[i-1]=='/')continue;     //nếu là kí tự dấu cách và trước đó là kí tự '/' thì bỏ qua 
-            bool check = false;                     //còn lại là trường hợp dấu cách kết thúc một từ morse
-            a[index] ='\0';                         //thêm kí tự NULL để a thành string
-            for(int j=0;j<42;j++)                   //xét xem từ morse có trong bảng morse kia không, nếu có thì check =true, không thì false
+            if(s[i]=='/'&&a[0]=='\0')continue;     // nếu là kí tự '/' và mảng a rỗng thì nghĩa là trường hợp trước đó là một dấu cách, nên bỏ qua
+            if(s[i]==' '&&a[0]=='\0')continue;     //nếu là kí tự dấu cách và mảng a rỗng thì là trường hợp dấu cách sau kí tự '/' nên bỏ qua 
+            bool check = false;                    //còn lại là trường hợp dấu cách hoặc dấu '/' kết thúc một từ morse
+            a[index] ='\0';                        //thêm kí tự NULL để a thành string
+            for(int j=0;j<42;j++)                  //xét xem từ morse có trong bảng morse kia không, nếu có thì check =true, không thì false
             {
                 if(a==morse[j])
                 {
