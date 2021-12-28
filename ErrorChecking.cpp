@@ -91,7 +91,7 @@ void check_text(string s)   //input: a string
             }
             if(check == false)
             {
-                cout<<"Error: Unrecognised character "<< i << s[i]<<" on line "<<new_line<<endl;      
+                cout<<"Error: Unrecognised character "<< s[i]<<" on line "<<new_line<<endl;      
             }
         }
         if(s[i]=='\n')
@@ -138,7 +138,7 @@ void check_morse(string s)  //input is a string
             }
             if(check == false)
             {
-                cout<<"Invalid Morse code "<< i << a<<" on line  "<<new_line<<endl;
+                cout<<"Invalid Morse code "<< a<<" on line  "<<new_line<<endl;
             }
             if(s[i]=='\n')
             {
