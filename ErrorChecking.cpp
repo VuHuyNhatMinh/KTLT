@@ -30,28 +30,28 @@ bool check_open(char a[])
 
 //hàm check xem file đầu ra có exist hay không,nếu đã tồn tại enter y hàm trả về True nếu enter n thì trả về False, return True nếu chưa tồn tại
 bool check_exist_out(char a[])     //input là mảng một chiều kí tự chứa một string
-{                                  //output là wanrning nếu file đã tồn tại, là NULL nếu file chưa tồn tại
+{                                  //output: nếu file đã tồn tại ấn y thì return True ấn n return False, nếu file chưa tồn tại return True
     char c;
     ifstream fs(a);
-    if (fs.is_open()) {
+    if (fs.is_open()) {         // nếu file tồn tại
         fs.close();
         cout <<"Warning: "<<a<<" already exists. Do you wish to overwrite (y,n)? ";
         
         cin>>c;
-        while(c!='y'&&c!='n')
+        while(c!='y'&&c!='n')   //chỉ được enter y hoặc n
         {
             cout<<"Enter only y or n";
         }
-        if (c == 'y')
+        if (c == 'y')           //nếu enter y
         {
             return true;
         }
-        else
+        else                     //nếu enter n
         {
             return false;
         }
     }
-    else
+    else                        //nếu file chưa tồn tại
     {
         return true;
     }
