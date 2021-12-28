@@ -1,5 +1,5 @@
 /*
- Author: NguyenTienLinh_20191924
+    Author: NguyenTienLinh_20191924
 */
 #include "Dictionary.h"
 #include <iostream>
