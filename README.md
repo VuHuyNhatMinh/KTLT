@@ -6,8 +6,11 @@ This is a project to decrypt from text file to morse file and vice versa.
 
 This could be found in the Dictionary.h file.
 
+![image](https://user-images.githubusercontent.com/83871693/147538876-3caf63d2-732f-45e0-9472-e3f7bff03bae.png)
+
 # FLOWCHART OF THE PROJECT
 
+![Flowchart drawio](https://user-images.githubusercontent.com/83871693/147538928-743790bb-122f-4f8a-874e-02e1836230f9.png)
 
 # HOW TO USE
 
