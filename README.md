@@ -23,3 +23,10 @@ Steps:
     g++ morse.cpp -o morse 
 6. To run the program. Type this command in cmd:
     morse your_data_file your_result_file
+
+# AUTHORS
+
+1. Nguyen Dinh Quoc Dai 20191724
+2. Nguyen Tien Linh 20191924
+3. Vu Huy Nhat Minh 20191973
+4. Dinh Hong Quan 20192031
