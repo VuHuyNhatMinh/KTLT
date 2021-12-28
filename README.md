@@ -1,10 +1,17 @@
-# KTLT
+# ABOUT
 
-Repo for Programming Technique
+This is a project to decrypt from text file to morse file and vice versa.
+
+# DATA FOR DECRYPTION
+
+This could be found in the Dictionary.h file.
+
+# FLOWCHART OF THE PROJECT
+
 
 # HOW TO USE
 
-- Steps: 
+Steps: 
 1. Clone this project to your computer.
 2. cd to the repo.
 3. Create data file which you want to decrypt.
